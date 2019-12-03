@@ -32,15 +32,23 @@ body {
 }
 
 #img1 {
-    background-color: black;
+    background-color: darkred;
     width: 100%;
 }
 
 #img2 {
-    background-color: blue;
+    background-color: darkorange;
 }
 
 #img3 {
+    background-color: gold;
+}
+
+#img4 {
+    background-color: darkgreen;
+}
+
+#img5 {
     background-color: teal;
 }
 
@@ -104,4 +112,22 @@ body {
         width: 100%;
         left: 0%;
     }
+}
+
+.slider-indicators {
+    width: 10%;
+    height: 10%;
+    margin: 50px auto;
+    position: absolute;
+    display: flex;
+    left: 45%;
+    justify-content: space-between;
+    bottom: 0%;
+}
+
+.indicator {
+    height: 15px;
+    width: 15px;
+    background-color: whitesmoke;
+    border-radius: 50%;
 }

@@ -5,12 +5,16 @@ window.addEventListener("load", () => {
     let previous_image = slider_images.length - 1;
     let button_left = document.getElementById("btnLeft");
     let button_right = document.getElementById("btnRight");
-    slider_images.forEach((img) => {
-        console.log(img)
+    let indicators = document.querySelector(".slider-indicators");
+
+    slider_images.forEach(() => {
+        indicators.innerHTML += "<div class='indicator'></div>";
     })
 
+    indicators = document.querySelectorAll(".indicator");
+
+
     button_right.addEventListener("click", () => {
-        console.log("hi")
         if (current_image == slider_images.length - 1) {
             next_image = 0;
         }
@@ -19,8 +23,6 @@ window.addEventListener("load", () => {
         current_image = next_image;
         next_image++;
         previous_image = current_image == 0 ? slider_images.length - 1 : current_image - 1;
-
-        console.log(previous_image, current_image, next_image)
 
     })
     button_left.addEventListener("click", () => {
@@ -33,8 +35,16 @@ window.addEventListener("load", () => {
         current_image = previous_image;
         previous_image--;
         next_image = current_image == slider_images - 1 ? 0 : current_image + 1;
+    })
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener("click", () => {
+            for (let i = 0; i <= Math.abs(current_image - index); i++) {
+                console.log(previous_image, current_image, next_image)
+                console.log(index)
+                current_image < index ? button_right.click() : button_left.click()
+            }
 
-        console.log(previous_image, current_image, next_image)
+        })
     })
 
 
