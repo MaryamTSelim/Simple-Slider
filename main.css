@@ -1,0 +1,107 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.slider {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slider-image {
+    height: 100%;
+    width: 0%;
+    position: absolute;
+    animation-duration: 1000ms;
+    animation-fill-mode: forwards;
+}
+
+.expanded {
+    width: 100%;
+}
+
+.collapsed {
+    width: 0%;
+}
+
+#img1 {
+    background-color: black;
+    width: 100%;
+}
+
+#img2 {
+    background-color: blue;
+}
+
+#img3 {
+    background-color: teal;
+}
+
+.slider-button {
+    position: absolute;
+    top: 40%;
+    background-color: transparent;
+    width: fit-content;
+    height: 10%;
+    margin: 50px;
+}
+
+.slider-button i {
+    color: whitesmoke;
+    font-size: 45px;
+}
+
+#btnRight {
+    right: 0%;
+}
+
+@keyframes slider-collapse-forward-animation {
+    from {
+        width: 100%;
+        left: 0;
+    }
+    to {
+        width: 0%;
+        left: 0;
+    }
+}
+
+@keyframes slider-expand-forward-animation {
+    from {
+        width: 0%;
+        right: 0%;
+    }
+    to {
+        width: 100%;
+        right: 0%;
+    }
+}
+
+@keyframes slider-collapse-backward-animation {
+    from {
+        width: 100%;
+        right: 0;
+    }
+    to {
+        width: 0%;
+        right: 0;
+    }
+}
+
+@keyframes slider-expand-backward-animation {
+    from {
+        width: 0%;
+        left: 0%;
+    }
+    to {
+        width: 100%;
+        left: 0%;
+    }
+}
