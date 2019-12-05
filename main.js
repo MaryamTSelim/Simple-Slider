@@ -38,13 +38,10 @@ window.addEventListener("load", () => {
     })
     indicators.forEach((indicator, index) => {
         indicator.addEventListener("click", () => {
-
             while (Math.abs(current_image - index) != 0) {
                 current_image < index ? button_right.click() : button_left.click()
                 console.log(index, current_image, Math.abs(current_image - index))
-
             }
-
         })
     })
 
